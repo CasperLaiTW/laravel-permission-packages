@@ -1,0 +1,23 @@
+{
+    "name": "casper/permission",
+    "description": "",
+    "authors": [
+        {
+            "name": "Casper Lai",
+            "email": "casper.lai@sleepingdesign.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Casper\\Permission": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
