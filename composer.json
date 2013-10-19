@@ -1,6 +1,6 @@
 {
     "name": "casper/permission",
-    "description": "",
+    "description": "Extend toddish verify permission to easy setting for Laravel 4.",
     "authors": [
         {
             "name": "Casper Lai",
@@ -12,9 +12,6 @@
         "illuminate/support": "4.0.x"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Casper\\Permission": "src/"
         }

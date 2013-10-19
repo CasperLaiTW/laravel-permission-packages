@@ -1,4 +1,5 @@
-<?php namespace Casper\Permission;
+<?php 
+namespace Casper\Permission;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,6 +20,13 @@ class PermissionServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('casper/permission');
+		if (file_exists($routes_file = $this->app['path'].'/routes.php'))
+			require_once $routes_file;
+		// Load the app permissions if they're in app/permissions.php
+        if (file_exists($file = $this->app['path'].'/permissions.php'))
+            require $file;
+        $url = \Request::url();
+        $this->app['permission']->verify($url);
 	}
 
 	/**
@@ -28,7 +36,10 @@ class PermissionServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['permission'] = $this->app->share(function($app){
+			$permissions = new Manager();
+			return $permissions;
+		});
 	}
 
 	/**
@@ -38,7 +49,8 @@ class PermissionServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('permission');
 	}
 
 }
+
