@@ -25,8 +25,6 @@ class PermissionServiceProvider extends ServiceProvider {
 		// Load the app permissions if they're in app/permissions.php
         if (file_exists($file = $this->app['path'].'/permissions.php'))
             require $file;
-        $url = \Request::url();
-        $this->app['permission']->verify($url);
 	}
 
 	/**
