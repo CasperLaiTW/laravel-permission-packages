@@ -7,7 +7,7 @@ It's a extend toddish verify permission to easy setting for Laravel 4.
 * a file organize all permission defined
 * Licensed under the MIT license
 
---
+---
 
 ## Important
 
