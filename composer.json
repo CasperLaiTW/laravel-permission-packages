@@ -8,6 +8,8 @@
             "email": "casper.lai@sleepingdesign.com"
         }
     ],
+    "keywords": ["laravel", "permissions", "verify"],
+    "homepage": "https://github.com/CasperLaiTW/laravel-permission-packages",
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.0.x",

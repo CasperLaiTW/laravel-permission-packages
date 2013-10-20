@@ -20,7 +20,7 @@ Add verify to your composer.json file:
 
 ```
 "require": {
-	"casper/permission": "2.1.*"
+	"casper/permission": "dev-master"
 }
 ```
 
