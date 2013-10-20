@@ -21,9 +21,10 @@ class Manager
 			return NULL;
 	}
 
-	public function verify($route)
+	public function verify()
 	{
-		$permissions = $this->getPermission($route);
+		$url = \Request::url();
+		$permissions = $this->getPermission($url);
 		//Super Admin is Uncontrolled (All Permission)
 		if(!\Auth::user()->can($permissions)) throw new UserCanNotUseException('User Can\'t use this.');
 
