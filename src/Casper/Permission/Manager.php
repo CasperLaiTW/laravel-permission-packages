@@ -7,8 +7,9 @@ class Manager
 
 
 
-	public function setPermission($route, $permissions = array())
+	public function setPermission($route, $permissions)
 	{
+		$permissions = !is_array($permissions) ? array($permissions) : $permissions;
 		$this->permissions[$route]	= $permissions;
 	}
 
