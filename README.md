@@ -75,7 +75,7 @@ I want to verify after checking admin logged-in. So I place code in `app/filters
 Route::filter('auth.admin', function(){
 	if(Auth::guest()) return Redirect::route('admin.login');
 	// Permission Verify
-	Permission::verify(Request::url());
+	Permission::verify();
 });
 ```
 
