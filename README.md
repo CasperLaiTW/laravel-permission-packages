@@ -56,13 +56,13 @@ Now, create a file called `app/permission.php`. The file will be loaded automati
 
 ```php
 // Permission::setPermission($route, $canUsePermissionName);
-Permission::setPermission(route('admin.roles.index'), array('role_index', 'role_all'));
+Permission::setPermission(array('admin.roles.index', 'admin.roles.show'), array('role_index', 'role_all'));
 ```
 
 As you can see, the define include two param:
 
-* `$route` It's your page url
-* `$canUsePermissionName` It's means can use this page's permission name. It's can be array, or string.
+* `$route` It's router name. It's can be array or string.
+* `$canUsePermissionName` It's means can use this page's permission name. It's can be array or string.
 
 #### 2. Run Verify
 In you want to run verify place to add code:
