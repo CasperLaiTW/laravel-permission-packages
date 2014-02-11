@@ -12,8 +12,7 @@
     "homepage": "https://github.com/CasperLaiTW/laravel-permission-packages",
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x",
-        "toddish/verify": "2.0.*"
+        "toddish/verify": ">=2.*"
     },
     "autoload": {
         "psr-0": {
